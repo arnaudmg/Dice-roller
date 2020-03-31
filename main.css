@@ -1,0 +1,157 @@
+body{
+    background: #FBEEC1;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 250px;
+    -webkit-perspective: 1000px;
+}
+.dice{
+    border: 2px solid white;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 5s infinite;
+}
+@keyframes rotate{
+    100%{
+        transform:rotateY(360deg) rotateX(360deg);
+    }
+}
+.face{
+    background: white;
+    height: 250px;
+    width: 250px;
+    border: 5px solid #FBEEC1;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.front{
+    transform: translateZ(125px);
+}
+.right{
+    transform: rotateY(-270deg) translateX(125px);
+    transform-origin: top right;
+}
+.back{
+    transform: translateZ(-125px) rotateY(180deg);
+}
+.left{
+    transform: rotateY(270deg) translateX(-125px);
+    transform-origin: center left;
+}
+.top{
+    transform: rotateX(90deg) translateZ(125px);
+}
+.behind{
+    transform: rotateX(-90deg) translateZ(125px);
+}
+.dot {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;  
+}
+.front .dot1{
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
+.left .dot1{
+    top: 50px;
+    left: 50px;
+}
+
+.left .dot2{
+    bottom: 50px;
+    right: 50px;
+}
+
+.right .dot1{
+    top: 50px;
+    left: 50px;
+}
+.right .dot2{
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+.right .dot3{
+    bottom: 50px;
+    right: 50px;
+}
+.top .dot1{
+    top: 50px;
+    left: 50px;
+}
+.top .dot2{
+    top: 50px;
+    right: 50px;
+}
+.top .dot3{
+    bottom: 50px;
+    left: 50px;
+}
+.top .dot4{
+    bottom: 50px;
+    right: 50px;
+}
+.back .dot1{
+    top: 50px;
+    left: 50px;
+}
+.back .dot2{
+    top: 50px;
+    right: 50px;
+}
+.back .dot3{
+    bottom: 50px;
+    left: 50px;
+}
+.back .dot4{
+    bottom: 50px;
+    right: 50px;
+}
+.back .dot5{
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+.behind .dot1{
+    top: 50px;
+    left: 50px;
+}
+.behind .dot2{
+    top: 50px;
+    right: 50px;
+}
+.behind .dot3{
+    bottom: 50px;
+    left: 50px;
+}
+.behind .dot4{
+    bottom: 50px;
+    right: 50px;
+}
+.behind .dot5{
+    top: calc(50% - 15px);
+    left: 50px;
+}
+.behind .dot6{
+    top: calc(50% - 15px);
+    right: 50px;
+}
