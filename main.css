@@ -1,3 +1,13 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url('../fonts/Lato/Lato-Regular.ttf'); 
+}
+  
+  @font-face {
+    font-family: Lato-Bold;
+    src: url('../fonts/Lato/Lato-Bold.ttf'); 
+}
+
 body{
     background: #FBEEC1;
     padding: 0;
@@ -11,6 +21,39 @@ a{
     left: 50%;
 }
 
+.averageTable{
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+th, td {
+    font-weight: unset;
+    padding-right: 30px;
+    padding-left: 40px;
+}
+
+th{
+    font-family: Lato-bold;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.4;
+    background-color: #6c7ae0;
+}
+
+td {
+    font-family: Lato-Regular;
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.4;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f6ff;
+}
 .container{
     height: 100vh;
     width: 100vw;
@@ -31,11 +74,13 @@ a{
     animation: rotate 6s infinite;
     animation-iteration-count: 1;
 }
+
 @keyframes rotate{
     100%{
         transform: rotate3d(1, 1, 1, 360deg);
     }
 }
+
 .face{
     background: white;
     height: 250px;
