@@ -65,7 +65,7 @@ tr:nth-child(even){
     width: 250px;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform .5s ease;
+    transition: transform .7s ease;
     animation: rotate 5s infinite;
     animation-iteration-count: 1;
 }
@@ -252,4 +252,36 @@ tr:nth-child(even){
 .behind .dot6{
     top: calc(50% - 15px);
     right: 50px;
+}
+
+.btn{
+    border-radius: 5px;
+    padding: 25px 25px;
+    font-size: 22px;
+    text-decoration: none;
+    margin: 20px;
+    display: inline-block;
+    outline: none;
+    position: absolute;
+    bottom: 25px;
+    left: calc(50% - 91px);
+    color: #ffffff;
+}
+.btn:focus{
+    outline: none !important;
+} 
+.btn:active{
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 5px 0px 0px;
+    outline: none !important;
+}
+
+.blue{
+    background-color: #55acee;
+    box-shadow: 0px 5px 0px 0px #3C93D5;
+}
+  
+.blue:hover{
+    background-color: #6FC6FF;
 }

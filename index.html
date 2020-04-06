@@ -48,19 +48,29 @@
                 <span class="dot dot6"></span>
             </div>
         </div>
-        <table class="averageTable">
+        <table class="averageTable" id="table">
             <thead>
                 <tr>
                     <th>Number of Roll</th>
                     <th>Random Number Generated</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Average Value</th>
+                    <th class="value">?</th>
+                </tr>
+            </tfoot>
+
         </table>
     </div>
-    <a href="#" class="start">GO</a>
+    <a href="#" class="start btn blue">Start the roll ! </a>
+    <audio id="audio" src="/sound/roll.wav" class="rollSound"></audio>
     <script src="./script.js"></script>
 </body>
-
 </html>
 
 

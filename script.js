@@ -1,9 +1,17 @@
 const start = document.querySelector('.start')
 const cubic = document.querySelector('.dice')
 let counter = 0
-var hasKeyframePlayed = false
+let value = document.querySelector('.value')
+let hasKeyframePlayed = false
 
-setTimeout(function() { hasKeyframePlayed = true; }, 5000);
+let length = document.querySelector(".averageTable").rows.length;
+
+const table = document.getElementById('table')
+
+
+setTimeout(function () {
+    hasKeyframePlayed = true;
+}, 5000);
 
 function random() {
     const nombre = Math.floor((Math.random() * 6) + 1);
@@ -15,15 +23,24 @@ function random() {
 }
 
 start.addEventListener('click', () => {
-    if(!hasKeyframePlayed) return
+    if (!hasKeyframePlayed) return
     const number = random()
     cubic.setAttribute('data-face', number)
-    const table = document.querySelector(".averageTable");
-    const row = table.insertRow(-1);
-    const cell1 = row.insertCell(0);
-    const cell2 = row.insertCell(1);
+    const table = document.querySelector(".averageTable tbody")
+    const row = table.insertRow(-1)
+    const cell1 = row.insertCell(0)
+    const cell2 = row.insertCell(1)
     counter++
-    cell1.innerHTML = `You have roll the dice ${counter} times`;
+    cell1.innerHTML = `You have roll the dice ${counter} times`
     cell2.innerHTML = number;
-})
+    var audio = document.querySelector('#audio')
+    return audio.play()
 
+    
+})
+// value.textContent = length - 3
+for(var i=1; i < length; i++){
+    value = value + parseInt(table.rows[i].cells[1].innerHTML)
+    console.log(table.rows);
+    
+}
