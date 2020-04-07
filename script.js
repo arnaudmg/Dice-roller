@@ -3,11 +3,9 @@ const cubic = document.querySelector('.dice')
 let counter = 0
 let value = document.querySelector('.value')
 let hasKeyframePlayed = false
-
 let length = document.querySelector(".averageTable").rows.length;
-
-const table = document.getElementById('table')
-
+const table = document.querySelector('.averageTable')
+let sumValue = 0
 
 setTimeout(function () {
     hasKeyframePlayed = true;
@@ -32,15 +30,22 @@ start.addEventListener('click', () => {
     const cell2 = row.insertCell(1)
     counter++
     cell1.innerHTML = `You have roll the dice ${counter} times`
-    cell2.innerHTML = number;
-    var audio = document.querySelector('#audio')
-    return audio.play()
+    cell2.innerHTML = number
+    
+    
+    const audio = document.querySelector('#audio')
+    audio.play()
 
+    sumValue += number
+    let average = sumValue / (table.rows.length - 1)
+
+    value.innerText = average
     
 })
-// value.textContent = length - 3
-for(var i=1; i < length; i++){
-    value = value + parseInt(table.rows[i].cells[1].innerHTML)
-    console.log(table.rows);
-    
-}
+
+//     for(var i = 1; i < table.rows.length; i++){
+//         value = parseInt(table.rows[i].cells[1].innerHTML)
+//     }
+// sumValue += value / (table.rows.length - 1)
+// console.log(sumValue);  
+// console.log(table.rows.length);
