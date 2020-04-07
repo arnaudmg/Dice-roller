@@ -8,9 +8,9 @@ Just clone the project on your own to get started.
 
 ## Built With
 
+* [Javascript Mainly](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 * HTML
 * CSS
-* [Javascript Mainly](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) - The CSS Framework I used
 
 ## Contributing
