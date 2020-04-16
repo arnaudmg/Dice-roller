@@ -12,7 +12,24 @@
 </head>
 
 <body>
+    <!-- <div class="subBackground">
+        <img src="monopoly.jpg" alt="Monopoly background">
+        <img src="unnamed.jpg" alt="Poker background">
+    </div> -->
     <div class="container">
+    <nav>
+        <div class="link">
+            <a href="#" data-path="monopoly.jpg" class="background-selector">Select Monopoly Background</a>
+        </div>
+        <div class="link">
+            <a href="#" data-path="unnamed.jpg" class="background-selector">Select Poker Background</a>
+        </div>
+        <div class="link">
+            <a href="#" class="background-selector">Reset !</a>
+        </div>
+        
+    </nav>
+
         <div class="dice" data-face="1">
             <div class="front face">
                 <span class="dot dot1"></span>
@@ -67,8 +84,8 @@
 
         </table>
     </div>
-    <a href="#" class="start btn blue">Start the roll ! </a>
-    <audio id="audio" src="./sound/roll.wav" class="rollSound"></audio>
+    <a href="#" class="start btn blue noclick">Start the roll ! </a> 
+    <audio class="audio" src="./sound/roll.wav" class="rollSound"></audio>
     <script src="./script.js"></script>
 </body>
 </html>
